@@ -1,0 +1,19 @@
+extends ../shared/template
+
+block content
+
+  h1 Add Portfolio
+
+  .add-project
+    form(method='POST', action='/portfolio', enctype='multipart/form-data')
+      input(type='text', name='title', placeholder='Title', autofocus=true)
+      textarea(name='description', placeholder='Description')
+      input(type='text', name='git', placeholder='Git URL')
+      input(type='text', name='app', placeholder='Application link')
+      input(type='date', name='date', placeholder='Date')
+      input(type='text', name='tags', placeholder='tags')
+      input(type='file', name='photo', multiple=true)
+      button Add Project
+
+block scripts
+  script(src='/js/es6/compiled/new-project.js')

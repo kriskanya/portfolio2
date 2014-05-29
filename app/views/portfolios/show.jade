@@ -1,0 +1,15 @@
+extends ../shared/template
+
+block content
+
+  h1= title
+  a.git(href='http://#{port.git}')= port.git
+  a.appLink(href='http://#{port.appLink}') View App
+  .date= port.date
+  p.description= port.description
+  each photo in port.photos
+    img(src='#{photo}')
+
+
+
+block scripts
